@@ -1,0 +1,12 @@
+h1,h2{
+    font-weight: 100;
+   
+}
+button{
+    background-color: aquamarine;
+    border-radius: 3px;
+}
+body{
+    border: thick double aquamarine;
+    margin-right : 70%;
+}
