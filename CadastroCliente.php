@@ -35,16 +35,16 @@
             <select name="cidade" id="cidade">
             <?php
             include('includes/conexao.php');
-            $sql = "SELECT * FROM cidade";
+            $sql = "SELECT * FROM Cidade";
             $result = mysqli_query($con,$sql);
             while($row = mysqli_fetch_array($result)){
-                echo "<option values '".$row['id']."'>".$row['nome']."/".$row['estado']."</option>";
+                echo "<option value = '".$row['id']."'>".$row['nome']."/".$row['estado']."</option>";
             }
             ?>
             </select>
         </div>
         <div>
-            <button type="submit">Cadastrar</button>
+            <button type="submit" value="<?php echo $row['id']; ?>">Cadastrar</button>
         </div>
     </fieldset>
     </form>

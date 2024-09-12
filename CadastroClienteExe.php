@@ -1,3 +1,6 @@
+<?php
+        $cidade = $_POST['cidade'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +20,10 @@
     echo "<h1>Dados do cliente</h1>";
     echo "Nome: $nome<br>";
     echo "Email: $email<br>";
-    $sql = "INSERT INTO Cliente(nome, email, senha, ativo, id_Cidade)";
-    $sql .= " VALUES('".$nome."','".$email."','".$senha."','".$cidade."')";
+    echo "Ativo: $ativo<br>";
+    echo "Cidade: $cidade<br>";
+    $sql = "INSERT INTO Cliente(nome, email, senha, ativo, Cidade_id)";
+    $sql .= " VALUES('".$nome."','".$email."','".$senha."','".$ativo."','".$cidade."')";
     echo $sql;
     $result = mysqli_query($con,$sql);
     if($result){
